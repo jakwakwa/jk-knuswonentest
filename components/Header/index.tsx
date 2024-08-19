@@ -1,66 +1,53 @@
+"use client";
 import Image from "next/image";
-import Logo from "../../public/assets/logo.svg";
-import SearchIcon from "../../public/assets/search-icon.svg";
-import ProfileIcon from "../../public/assets/profile-icon.svg";
+import Logo from "@/public/assets/logo.svg";
+import ProfileIcon from "@/public/assets/profile-icon.svg";
+import HeaderIcn from "@/components/Icons/HeaderIcn";
+import SearchIcn from "@/public/assets/search-icon.svg";
 
 function Header() {
+  const navItems = [
+    {
+      id: 1,
+      name: "Ik huur",
+    },
+    {
+      id: 2,
+      name: "Ik zoek",
+    },
+    {
+      id: 3,
+      name: "Over ons",
+    },
+    {
+      id: 4,
+      name: "Projecten",
+    },
+  ];
+
   return (
     <header>
-      <div
-        className="flex flex-row items-center w-screen h-20 bg-white shadow px-24
-      justify-around
-
-      "
-      >
+      <div className="flex flex-row items-center w-screen h-20 bg-white shadow px-24 justify-around">
         <div className="w-[208px] h-[20px] relative">
           <Image src={Logo} alt="logo" className="w-full h-full object-cover" />
         </div>
-        <div className="flex w-[353px] h-20 relative">
-          <div className="px-3 h-full inline-flex items-center">
-            <div className="text-[#39468c] text-base font-semibold font-['Poppins']">
-              Ik huur
-            </div>
-          </div>
-          <div className="px-3 h-full inline-flex items-center">
-            <div className="text-[#39468c] text-base font-semibold font-['Poppins']">
-              Ik zoek
-            </div>
-          </div>
-          <div className="px-3 h-full inline-flex items-center">
-            <div className="text-[#39468c] text-base font-semibold font-['Poppins']">
-              Over ons
-            </div>
-          </div>
-          <div className="px-3 h-full inline-flex items-center">
-            <div className="text-[#39468c] text-base font-semibold font-['Poppins']">
-              Projecten
-            </div>
-          </div>
-        </div>
-        <div
-          className="
-        w-28
 
-        "
-        >
-          <div className="w-12 h-12 p-2.5 justify-start items-center gap-2.5 inline-flex">
-            <div className="w-7 h-7 relative">
-              <Image
-                src={SearchIcon}
-                alt="logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-12 h-12 p-2.5 justify-start items-center gap-2.5 inline-flex">
-            <div className="w-7 h-7 relative">
-              <Image
-                src={ProfileIcon}
-                alt="logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+        <nav className="flex flex-row gap-8">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              className="text-black"
+              onClick={() => {
+                console.log("clicked nav item:", item.name);
+              }}
+            >
+              {item.name}
+            </button>
+          ))}
+        </nav>
+        <div className="w-28">
+          <HeaderIcn icon={SearchIcn} />
+          <HeaderIcn icon={ProfileIcon} />
         </div>
       </div>
     </header>
