@@ -23,7 +23,7 @@ function Cta({
   readonly title: string;
   readonly ctaText: string;
 }) {
-  const shadowStyle = `[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)]`;
+  const shadowStyle = `shadow-[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)]`;
   return (
     <section className="pt-[64px] pb-[84px] w-screen relative bg-white z-10">
       <div
@@ -32,7 +32,7 @@ function Cta({
         } justify-center items-start relative z-10`}
       >
         <div
-          className={`w-[496px] h-[372px] shadow-${shadowStyle} rounded-xl overflow-hidden`}
+          className={`w-[496px] h-[372px] ${shadowStyle} rounded-xl overflow-hidden`}
         >
           <Image
             src={variant === "left" ? CTAImg : CTAImgTwo}

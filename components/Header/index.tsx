@@ -36,7 +36,7 @@ function Header() {
           {navItems.map((item) => (
             <button
               key={item.id}
-              className="text-black"
+              className="text-black hover:underline hover:opacity-65 hover:text-[#335f6d] transition duration-300 ease-in-out"
               onClick={() => {
                 console.log("clicked nav item:", item.name);
               }}
