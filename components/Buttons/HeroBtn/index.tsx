@@ -9,7 +9,7 @@ function HeroBtn({
   readonly icon: StaticImport;
 }) {
   return (
-    <button className="flex gap-2 p-4 justify-start items-center w-72 h-16  bg-white hover:bg-slate-200 transition duration-300 ease-in-out rounded-xl shadow text-[#39468c] text-lg font-semibold font-['Poppins']">
+    <button className="flex gap-2 p-4 justify-start items-center w-72 h-16  bg-white hover:bg-slate-200 transition duration-300 ease-in-out rounded-xl shadow text-[#39468c] text-lg font-semibold font-body">
       <div className="w-8 h-8 relative">
         <Image src={icon} alt="hammer-icon" />
       </div>

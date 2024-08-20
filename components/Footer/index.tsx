@@ -10,7 +10,7 @@ function Footer() {
         <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
           Bel of mail ons
         </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
+        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-body">
           012 - 345 67 89
           <br />
           klantenservice@knuswonen.nu
@@ -20,7 +20,7 @@ function Footer() {
         <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
           Openingstijden
         </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
+        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-body">
           Maandag t/m donderdag van 8:30 tot 16:30 uur.
           <br />
           Vrijdag van 8:30 tot 12:00 uur
@@ -30,7 +30,7 @@ function Footer() {
         <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
           Kom langs op afspraak
         </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
+        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-body">
           Straatweglaan 123
           <br />
           1234 AB Dorpstad
@@ -41,16 +41,16 @@ function Footer() {
       </div>
       <div className="w-[1512px] h-12 left-0 top-[236px] absolute">
         <div className="w-[1512px] h-12 left-0 top-0 absolute bg-white" />
-        <div className="left-[1252px] top-[15px] absolute text-black text-xs font-normal font-['Poppins']">
+        <div className="left-[1252px] top-[15px] absolute text-black text-xs font-normal font-body">
           © KnusWonen 2024
         </div>
-        <div className="left-[144px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
+        <div className="left-[144px] top-[15px] absolute text-black text-xs font-normal font-body underline">
           Privacy
         </div>
-        <div className="left-[212px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
+        <div className="left-[212px] top-[15px] absolute text-black text-xs font-normal font-body underline">
           Cookieverklaring
         </div>
-        <div className="left-[337px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
+        <div className="left-[337px] top-[15px] absolute text-black text-xs font-normal font-body underline">
           Disclaimer
         </div>
       </div>

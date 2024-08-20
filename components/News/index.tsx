@@ -9,7 +9,7 @@ function News() {
       <div className="w-[1512px] h-[572px] left-0 top-0  bg-[#99a3d8]" />
       <div className="w-[912px] h-[444px] left-[300px] top-[64px] absolute">
         <div className="h-[21px] left-[701px] top-[423px] absolute justify-start items-center gap-1 inline-flex">
-          <div className="text-[#39468c] text-sm font-medium font-['Poppins']">
+          <div className="text-[#39468c] text-sm font-medium font-body">
             Bekijk alle nieuwsberichten
           </div>
           <div className="w-4 h-4 relative" />
@@ -28,18 +28,18 @@ function News() {
             />
             <div className="w-[264px] h-[152px] left-[12px] top-[172px] absolute">
               <div className="h-[99px] left-0 top-0 absolute flex-col justify-start items-start gap-2 inline-flex">
-                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-['Poppins'] uppercase">
+                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-body uppercase">
                   5 maart 2024
                 </div>
                 <div className="self-stretch text-[#39468c] text-xl font-bold font-['Overlock']">
                   Telefoonstoring
                 </div>
-                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-['Poppins']">
+                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-body">
                   Update: Telefoonstoring verholpen
                 </div>
               </div>
               <div className="left-[172px] top-[135px] absolute justify-start items-center gap-1 inline-flex">
-                <div className="text-[#39468c] text-sm font-medium font-['Poppins']">
+                <div className="text-[#39468c] text-sm font-medium font-body">
                   Lees meer
                 </div>
                 <div className="w-4 h-4 relative" />
@@ -56,18 +56,18 @@ function News() {
             />
             <div className="w-[264px] h-[152px] left-[12px] top-[172px] absolute">
               <div className="h-[123px] left-0 top-0 absolute flex-col justify-start items-start gap-2 inline-flex">
-                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-['Poppins'] uppercase">
+                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-body uppercase">
                   17 februari 2024
                 </div>
                 <div className="self-stretch text-[#39468c] text-xl font-bold font-['Overlock']">
                   Energiebesparing - Wat doet KnusWonen?
                 </div>
-                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-['Poppins']">
+                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-body">
                   KnusWonen werkt hard aan het energiezuiniger maken van ...
                 </div>
               </div>
               <div className="left-[172px] top-[135px] absolute justify-start items-center gap-1 inline-flex">
-                <div className="text-[#39468c] text-sm font-medium font-['Poppins']">
+                <div className="text-[#39468c] text-sm font-medium font-body">
                   Lees meer
                 </div>
                 <div className="w-4 h-4 relative" />
@@ -84,18 +84,18 @@ function News() {
             />
             <div className="w-[264px] h-[152px] left-[12px] top-[172px] absolute">
               <div className="h-[123px] left-0 top-0 absolute flex-col justify-start items-start gap-2 inline-flex">
-                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-['Poppins'] uppercase">
+                <div className="self-stretch text-[#999999] text-[11px] font-semibold font-body uppercase">
                   30 januari 2024
                 </div>
                 <div className="self-stretch text-[#39468c] text-xl font-bold font-['Overlock']">
                   Energietoeslag: Heeft u er recht op?
                 </div>
-                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-['Poppins']">
+                <div className="self-stretch h-[42px] text-[#39468c] text-sm font-normal font-body">
                   Steeds meer mensen hebben moeite om hun energierekening te ...
                 </div>
               </div>
               <div className="left-[172px] top-[135px] absolute justify-start items-center gap-1 inline-flex">
-                <div className="text-[#39468c] text-sm font-medium font-['Poppins']">
+                <div className="text-[#39468c] text-sm font-medium font-body">
                   Lees meer
                 </div>
                 <div className="w-4 h-4 relative" />

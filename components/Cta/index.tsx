@@ -4,16 +4,36 @@ import CTABgElement from "../../public/assets/CTA-backgroundElement.svg";
 import CTAImg from "../../public/assets/cta-img.png";
 import CTAImgTwo from "../../public/assets/cta-img2.png";
 import CtaBtn from "../Buttons/CtaBtn";
+import { Overlock } from "next/font/google";
 
-function Cta({ variant = "left" }) {
+const overlock = Overlock({
+  variable: "--font-overlock",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+function Cta({
+  variant = "left",
+  body,
+  title,
+  ctaText,
+}: {
+  readonly variant: string;
+  readonly body: string;
+  readonly title: string;
+  readonly ctaText: string;
+}) {
+  const shadowStyle = `[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)]`;
   return (
-    <section className="pt-[64px] pb-[84px] w-screen relative bg-[#f5f5f5] z-10">
+    <section className="pt-[64px] pb-[84px] w-screen relative bg-white z-10">
       <div
         className={`flex gap-8 flex-row ${
           variant === "left" ? "flex-row" : "flex-row-reverse"
         } justify-center items-start relative z-10`}
       >
-        <div className="w-[496px] h-[372px] shadow-[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)] rounded-xl overflow-hidden">
+        <div
+          className={`w-[496px] h-[372px] shadow-${shadowStyle} rounded-xl overflow-hidden`}
+        >
           <Image
             src={variant === "left" ? CTAImg : CTAImgTwo}
             alt="placeholder"
@@ -23,26 +43,19 @@ function Cta({ variant = "left" }) {
           />
         </div>
 
-        <div className="flex flex-col gap-[24px] w-[597px]">
+        <div className="flex flex-col gap-[21px] w-[597px]">
           <div
-            className={`w-[597px]
-
-            ${variant === "left" ? "text-[#35bce7]" : "text-[#FF6B38]"}
-
-             text-[32px] font-bold font-['Overlock']`}
+            className={`w-[597px] text-[32px] font-bold ${
+              variant === "left" ? "text-[#35bce7]" : "text-[#FF6B38]"
+            } ${overlock.className}`}
           >
-            We verbeteren onze woningen
+            {title}
           </div>
-          <div className="w-full max-w-[496px]  text-black text-base font-normal font-['Poppins']">
-            Bij KnusWonen zetten we ons in om onze woningen energiezuiniger en
-            duurzamer te maken. We verbeteren de isolatie met dubbelglas en
-            plaatsen moderne cv-ketels en zonnepanelen. Hierdoor stijgt het
-            wooncomfort, dalen de energiekosten, en verminderen we de
-            CO2-uitstoot. Ons doel is dat al onze huurders kunnen genieten van
-            een warme, veilige en toekomstbestendige woning.
+          <div className="w-full max-w-[496px] text-black text-base font-normal font-body">
+            {body}
             <br />
             <br />
-            Wilt u meer weten over onze energiebesparende maatregelen?
+            {ctaText}
           </div>
           <CtaBtn variant={variant as "left" | "right"}>Lees meer</CtaBtn>
         </div>
