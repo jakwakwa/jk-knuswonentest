@@ -1,10 +1,10 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
-function HeroBg({ HeroBgSrc }: { HeroBgSrc: StaticImport }) {
+function HeroBg({ HeroBgSrc }: { readonly HeroBgSrc: StaticImport }) {
   return (
-    <div className="w-[1512px] h-[560px] left-0 top-0 ">
-      <div className="w-[1512px] h-[560px] left-0 top-0 absolute z-0">
+    <div className="w-full h-[560px] left-0 top-0 ">
+      <div className="w-full h-[560px] left-0 top-0 absolute z-0">
         <Image
           src={HeroBgSrc}
           alt="hero-bg"

@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="w-[1512px] h-[284px] relative">
-      <div className="w-[1512px] h-[236px]  bg-[#e4e4e4]" />
+    <footer className="w-full h-[284px] relative">
+      <div className="w-full h-[236px]  bg-[#e4e4e4]" />
       <div className="w-8 h-8 left-[1115px] top-[100px] absolute" />
       <div className="w-8 h-8 left-[1075px] top-[100px] absolute" />
       <div className="w-72 h-[84px] left-[144px] top-[64px] absolute">
@@ -39,8 +39,8 @@ function Footer() {
       <div className="left-[1080px] top-[64px] absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
         Volg ons op onze sociale kanalen
       </div>
-      <div className="w-[1512px] h-12 left-0 top-[236px] absolute">
-        <div className="w-[1512px] h-12 left-0 top-0 absolute bg-white" />
+      <div className="w-full h-12 left-0 top-[236px] absolute">
+        <div className="w-full h-12 left-0 top-0 absolute bg-white" />
         <div className="left-[1252px] top-[15px] absolute text-black text-xs font-normal font-body">
           © KnusWonen 2024
         </div>
