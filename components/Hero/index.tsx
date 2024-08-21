@@ -1,37 +1,28 @@
-import Image from "next/image";
-import HeroBg from "../../public/assets/HeroBackground.png";
+import HeroBackgroundImg from "@/public/assets/HeroBackground.png";
 import HeroBtn from "../Buttons/HeroBtn";
-import HammerIcon from "../../public/assets/HammerIcon.svg";
-import HandDepositIcon from "../../public/assets/HandDepositIcon.svg";
-import ChatCircleIcon from "../../public/assets/ChatsCircle.svg";
+import HammerIcon from "@/public/assets/HammerIcon.svg";
+import HandDepositIcon from "@/public/assets/HandDepositIcon.svg";
+import ChatCircleIcon from "@/public/assets/ChatsCircle.svg";
+import HeroBg from "./components/HeroBg";
 
 function Hero() {
   return (
-    <div className="w-[1512px] h-[560px] relative">
-      <div className="w-[1512px] h-[560px] left-0 top-0 ">
-        <div className="w-[1512px] h-[560px] left-0 top-0 absolute bg-[#d9d9d9]" />
-        <div className="w-[1512px] h-[560px] left-0 top-0 absolute">
-          <Image
-            src={HeroBg}
-            alt="hero-bg"
-            className="w-full h-full object-cover"
-          />
+    <div className="w-screen h-[560px] relative">
+      <div className="w-full h-[560px] flex items-end gap-3 relative z-10 py-6">
+        <div className="w-full flex flex-col  items-center justify-center md:justify-center md:items-center gap-4">
+          <div
+            className={`relative z-10 text-white text-[24px] gap-2 text-left md:w-[60%] font-medium`}
+          >
+            Waarmee kunnen we je helpen?
+          </div>
+          <div className="flex flex-col w-1/2 md:w-5/6 lg:w-1/2  justify-center md:flex-row lg:gap-12 md:gap-8 gap-4">
+            <HeroBtn title="Reparatie melden" icon={HammerIcon} />
+            <HeroBtn title="Huur betalen" icon={HandDepositIcon} />
+            <HeroBtn title="Contact opnemen" icon={ChatCircleIcon} />
+          </div>
         </div>
       </div>
-      <div className="w-[912px] h-[116px] left-[300px] top-[420px] absolute">
-        <div className="w-72 h-16 p-4 left-0 top-[52px] absolute justify-start items-center gap-3 inline-flex">
-          <HeroBtn title="Reparatie melden" icon={HammerIcon} />
-        </div>
-        <div className="w-72 h-16 p-4 left-[312px] top-[52px] absolute justify-start items-center gap-3 inline-flex">
-          <HeroBtn title="Huur betalen" icon={HandDepositIcon} />
-        </div>
-        <div className="w-72 h-16 p-4 left-[624px] top-[52px] absolute justify-start items-center gap-3 inline-flex">
-          <HeroBtn title="Contact opnemen" icon={ChatCircleIcon} />
-        </div>
-        <div className="left-0 top-0 absolute text-white text-2xl font-medium font-['Poppins']">
-          Waarmee kunnen we je helpen?
-        </div>
-      </div>
+      <HeroBg HeroBgSrc={HeroBackgroundImg} />
     </div>
   );
 }

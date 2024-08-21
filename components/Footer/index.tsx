@@ -1,57 +1,119 @@
-import React from "react";
+import FacebookIcn from "@/public/assets/facebook.svg";
+import LinkedInIcn from "@/public/assets/linkedin.svg";
+import Image from "next/image";
+import { Overlock } from "next/font/google";
+import Link from "next/link";
+
+const overlock = Overlock({
+  variable: "--font-overlock",
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 function Footer() {
+  const footerSections = [
+    {
+      title: "Bel of mail ons",
+      body: "012 - 345 67 89",
+    },
+    {
+      title: "Openingstijden",
+      body: "Maandag t/m donderdag van 8:30 tot 16:30 uur.",
+    },
+    {
+      title: "Kom langs op afspraak",
+      body: "Straatweglaan 123",
+    },
+    {
+      title: "Volg ons op onze sociale kanalen",
+      body: null,
+      icons: [
+        {
+          src: FacebookIcn,
+          alt: "Facebook",
+          link: "https://www.facebook.com",
+        },
+        {
+          src: LinkedInIcn,
+          alt: "LinkedIn",
+          link: "https://www.linkedin.com",
+        },
+      ],
+    },
+  ];
+
+  const bootomFooterSections = [
+    {
+      title: "Privacy",
+      link: "#privacy",
+    },
+    {
+      title: "Cookieverklaring",
+      link: "#cookieverklaring",
+    },
+    {
+      title: "Disclaimer",
+      link: "#disclaimer",
+    },
+  ];
+
   return (
-    <footer className="w-[1512px] h-[284px] relative">
-      <div className="w-[1512px] h-[236px]  bg-[#e4e4e4]" />
-      <div className="w-8 h-8 left-[1115px] top-[100px] absolute" />
-      <div className="w-8 h-8 left-[1075px] top-[100px] absolute" />
-      <div className="w-72 h-[84px] left-[144px] top-[64px] absolute">
-        <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
-          Bel of mail ons
-        </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
-          012 - 345 67 89
-          <br />
-          klantenservice@knuswonen.nu
-        </div>
+    <footer className="w-full h-auto md:h-[284px] flex flex-col items-center bg-[#e4e4e4] pt-12">
+      <div className="w-5/6 flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center mt-4 mb-12 max-w-screen-xl gap-4 md:gap-8">
+        {footerSections.map((section, index) => (
+          <div
+            className="w-full h-[84px] flex flex-col items-start"
+            key={index}
+          >
+            <div
+              className={`text-[#1e1e1e] text-xl font-bold ${overlock.className}`}
+            >
+              {section.title}
+            </div>
+            <div className="text-[#1e1e1e] text-base  font-body mt-2 font-normal">
+              {section.body}
+            </div>
+
+            {section.icons && (
+              <div className="flex gap-2 mt-2">
+                {section.icons.map((icon, index) => (
+                  <Link
+                    href={icon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={index}
+                  >
+                    <Image src={icon.src} alt={icon.alt} />
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="w-72 h-[108px] left-[456px] top-[64px] absolute">
-        <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
-          Openingstijden
-        </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
-          Maandag t/m donderdag van 8:30 tot 16:30 uur.
-          <br />
-          Vrijdag van 8:30 tot 12:00 uur
-        </div>
-      </div>
-      <div className="w-72 h-[84px] left-[768px] top-[64px] absolute">
-        <div className="left-0 top-0 absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
-          Kom langs op afspraak
-        </div>
-        <div className="w-72 left-0 top-[36px] absolute text-[#1e1e1e] text-base font-normal font-['Poppins']">
-          Straatweglaan 123
-          <br />
-          1234 AB Dorpstad
-        </div>
-      </div>
-      <div className="left-[1080px] top-[64px] absolute text-[#1e1e1e] text-xl font-bold font-['Overlock']">
-        Volg ons op onze sociale kanalen
-      </div>
-      <div className="w-[1512px] h-12 left-0 top-[236px] absolute">
-        <div className="w-[1512px] h-12 left-0 top-0 absolute bg-white" />
-        <div className="left-[1252px] top-[15px] absolute text-black text-xs font-normal font-['Poppins']">
-          © KnusWonen 2024
-        </div>
-        <div className="left-[144px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
-          Privacy
-        </div>
-        <div className="left-[212px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
-          Cookieverklaring
-        </div>
-        <div className="left-[337px] top-[15px] absolute text-black text-xs font-normal font-['Poppins'] underline">
-          Disclaimer
+
+      <div className=" w-full h-18 md:h-12 bg-white">
+        <div className="w-5/6 flex flex-col md:flex-row justify-between items-center mt-4 mb-12 max-w-screen-xl mx-auto gap-4 md:gap-0">
+          <div
+            className="w-full flex gap-3  items-start justify-start"
+            id="bottom-links"
+          >
+            {bootomFooterSections.map((section, index) => (
+              <Link
+                className="text-[#1e1e1e] text-sm font-normal font-body hover:underline"
+                id={section.link}
+                key={index}
+                href={`#${section.link}`}
+              >
+                {section.title}
+              </Link>
+            ))}
+          </div>
+          <div className="w-full flex items-center justify-end">
+            <div className="text-xs font-normal font-body w-full inline-flex text-right justify-start md:justify-end text-black">
+              © KnusWonen 2024
+            </div>
+          </div>
         </div>
       </div>
     </footer>
