@@ -25,14 +25,14 @@ function Cta({
 }) {
   const shadowStyle = `shadow-[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)]`;
   return (
-    <section className="pt-[64px] pb-[84px] w-full relative bg-white z-10 px-24">
+    <section className="pt-[64px] pb-[84px] relative bg-white z-10 px-12 md:px-24 w-screen">
       <div
-        className={`w-full md:max-w-screen-md lg:max-w-full flex gap-8 flex-col-reverse md:flex-row justify-center items-center lg:items-start relative z-10 ${
+        className={`w-full md:max-w-screen-md lg:max-w-full flex gap-8 flex-col-reverse md:flex-row justify-center items-center lg:items-start relative z-10 overflow-x-hidden ${
           variant === "left" ? "flex-row" : "lg:flex-row-reverse"
         } `}
       >
         <div
-          className={`md:w-[238px] md:h-[136px] lg:w-[496px] lg:h-[372px] ${shadowStyle} rounded-xl overflow-hidden`}
+          className={`w-[238px] h-[136px] lg:w-[496px] lg:h-[372px] ${shadowStyle} rounded-xl hidden lg:inline`}
         >
           <Image
             src={variant === "left" ? CTAImg : CTAImgTwo}
@@ -43,7 +43,7 @@ function Cta({
           />
         </div>
 
-        <div className="flex flex-col gap-[21px] max-w-screen-md  w-full lg:w-[597px] justify-start md:items-center lg:items-start">
+        <div className="flex flex-col gap-[21px] max-w-screen-md w-full lg:w-[597px] justify-start md:items-start">
           <div
             className={`w-full lg:w-[597px] text-[32px] font-bold ${
               variant === "left" ? "text-[#35bce7]" : "text-[#FF6B38]"
@@ -62,7 +62,7 @@ function Cta({
       </div>
 
       <div
-        className={`w-[254px] h-[274px] absolute ${
+        className={`w-[254px] h-[274px] hidden lg:inline md:visible absolute ${
           variant === "left"
             ? "xl:left-[8.9%] lg:left-[3%] top-[5%]"
             : "bottom-[7%] xl:right-[8.9%] lg:right-[3%]"

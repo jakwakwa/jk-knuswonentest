@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function HeroBg({ HeroBgSrc }: { readonly HeroBgSrc: StaticImport }) {
   return (
-    <div className="w-full h-[560px] left-0 top-0 ">
+    <div className="w-screen h-[560px] left-0 top-0 overflow-x-hidden">
       <div className="w-full h-[560px] left-0 top-0 absolute z-0">
         <Image
           src={HeroBgSrc}
