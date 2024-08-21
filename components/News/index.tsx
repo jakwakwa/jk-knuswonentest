@@ -36,10 +36,10 @@ function News() {
     },
   ];
   return (
-    <section className="w-screen h-auto md:h-[572px] relative  bg-[#99a3d8] px-12 lg:px-64 pt-0 pb-12 md:py-12">
-      <div className="flex flex-col gap-4 w-full h-auto md:h-[444px]">
+    <section className="w-screen h-auto md:h-[572px] relative  bg-[#99a3d8] px-12 lg:px-64 xl:px-128 pt-0 pb-12 md:py-12">
+      <div className="flex flex-col gap-4 w-full lg:max-w-screen-lg h-auto md:h-[444px] mx-auto">
         <div
-          className={` w-3/4 px-12 pt-6 md:px-0 md:pt-0 md:w-[597px] text-[#39468c] text-[32px] font-extrabold ${overlock.className}
+          className={`w-3/4 px-12 pt-6 md:px-0 md:pt-0 md:w-[597px] text-[#39468c] text-[32px] font-extrabold ${overlock.className}
         `}
         >
           Laatste nieuws
