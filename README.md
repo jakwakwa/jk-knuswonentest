@@ -26,11 +26,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 ## Designer Feedback
 
 * **News Section:** The main title and "View all news articles" button colour isn't clear enough. I would suggest a lighter blue background colour
-* Hero Section: The background image limits what one can achieve on mobile screens due to vast light colour usage in the image which limits the positioning and visibility of the copy "Waarmee kunnen we je helpen?"
+* **Hero Section:** The background image limits what one can achieve on mobile screens due to vast light colour usage in the image which limits the positioning and visibility of the copy "Waarmee kunnen we je helpen?"
 * **Icons:** Some of the icons did not have appropriate layer names
 * **Footer:** Slightly decrease the font-size of the text underneath the the titles
 
