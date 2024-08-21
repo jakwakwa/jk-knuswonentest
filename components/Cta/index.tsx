@@ -25,9 +25,9 @@ function Cta({
 }) {
   const shadowStyle = `shadow-[0px_79px_22px_0px_rgba(0,0,0,0.00),0px_50px_20px_0px_rgba(0,0,0,0.01),0px_28px_17px_0px_rgba(0,0,0,0.03),0px_13px_13px_0px_rgba(0,0,0,0.05),0px_3px_7px_0px_rgba(0,0,0,0.06)]`;
   return (
-    <section className="pt-[64px] pb-[84px] relative bg-white z-10 px-12 md:px-24 w-screen">
+    <section className="pt-[24px] md:pt-[64px] pb-[24px] md:pb-[84px] relative bg-white z-10 px-12 md:px-24 w-screen">
       <div
-        className={`w-full md:max-w-screen-md lg:max-w-full flex gap-8 flex-col-reverse md:flex-row justify-center items-center lg:items-start relative z-10 overflow-x-hidden ${
+        className={`w-full md:max-w-screen-md lg:max-w-full flex gap-8 flex-col-reverse md:flex-row justify-center items-center lg:items-start relative z-10 overflow-x-hidden  md:overflow-visible ${
           variant === "left" ? "flex-row" : "lg:flex-row-reverse"
         } `}
       >
@@ -39,13 +39,13 @@ function Cta({
             alt="placeholder"
             width={496}
             height={372}
-            className="w-[496px] h-[372px] rounded-xl"
+            className="w-[496px] h-[372px] rounded-xl object-cover"
           />
         </div>
 
         <div className="flex flex-col gap-[21px] max-w-screen-md w-full lg:w-[597px] justify-start md:items-start">
           <div
-            className={`w-full lg:w-[597px] text-[32px] font-bold ${
+            className={`w-full lg:w-[597px] text-[32px]  leading-tight font-bold ${
               variant === "left" ? "text-[#35bce7]" : "text-[#FF6B38]"
             } ${overlock.className}`}
           >
