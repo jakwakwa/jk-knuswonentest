@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Poppins, Overlock } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,6 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+      </Head>
       <body className={`${poppins.className} `}> {children} </body>
     </html>
   );
