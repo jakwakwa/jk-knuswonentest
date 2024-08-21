@@ -8,7 +8,7 @@ import { Overlock } from "next/font/google";
 const overlock = Overlock({
   variable: "--font-overlock",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["700"],
 });
 
 function News() {
