@@ -92,8 +92,8 @@ function Footer() {
         ))}
       </div>
 
-      <div className=" w-full h-18 md:h-12 bg-white">
-        <div className="w-5/6 flex flex-col md:flex-row justify-between items-center mt-4 mb-12 max-w-screen-xl mx-auto gap-4 md:gap-0">
+      <div className="w-full h-16 md:h-12 bg-white">
+        <div className="w-5/6 flex flex-col md:flex-row h-16 md:h-12 justify-center md:justify-between items-center max-w-screen-xl mx-auto gap-2 md:gap-0">
           <div
             className="w-full flex gap-3  items-start justify-start"
             id="bottom-links"
@@ -109,8 +109,8 @@ function Footer() {
               </Link>
             ))}
           </div>
-          <div className="w-full flex items-center justify-end">
-            <div className="text-xs font-normal font-body w-full inline-flex text-right justify-start md:justify-end text-black">
+          <div className="w-full flex items-center justify-center">
+            <div className="text-xs font-normal font-body w-full inline-flex text-right justify-start items-center md:justify-end text-black">
               © KnusWonen 2024
             </div>
           </div>

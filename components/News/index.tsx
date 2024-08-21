@@ -39,7 +39,7 @@ function News() {
     <section className="w-screen h-auto md:h-[572px] relative  bg-[#99a3d8] px-12 lg:px-32 xl:px-64 pt-0 pb-12 lg:py-12">
       <div className="flex flex-col gap-4 w-full xl:max-w-screen-lg h-auto md:h-[444px] mx-auto">
         <div
-          className={`w-3/4 px-12 pt-6 md:px-0 md:pt-0 md:w-[597px] text-[#39468c] text-[32px] font-extrabold ${overlock.className}
+          className={`w-full pt-6 md:px-0 md:pt-0 md:w-[597px] text-[#39468c] text-[32px] font-extrabold ${overlock.className}
         `}
         >
           Laatste nieuws

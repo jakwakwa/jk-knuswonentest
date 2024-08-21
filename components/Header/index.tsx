@@ -30,7 +30,7 @@ function Header() {
 
   return (
     <header>
-      <div className="flex flex-row items-center w-screen h-20 bg-white shadow justify-between lg:justify-around px-8 lg:px-24">
+      <div className="flex flex-row items-center w-screen h-14 md:h-20 bg-white shadow justify-between lg:justify-around px-4 md:px-8 lg:px-24">
         <div className="relative md:w-[208px] md:h-[20px] w-[104px] h-[10px]">
           <Image src={Logo} alt="logo" className="w-full h-full object-cover" />
         </div>
@@ -120,7 +120,7 @@ function Header() {
           </div>
         )}
 
-        <div className="w-28">
+        <div className="w-18 md:w-28">
           <HeaderIcn icon={SearchIcn} />
           <HeaderIcn icon={ProfileIcon} />
         </div>
